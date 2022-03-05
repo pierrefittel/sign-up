@@ -1,2 +1,121 @@
 @use 'reset'
+@import url('https://fonts.googleapis.com/css2?family=Montserrat&display=swap')
 
+$font-stack: 'Montserrat', 'Liberation Sans'
+    
+//Base color palette
+$old-burgundy: rgba(61, 43, 41, 1)
+$grullo: rgba(211, 206, 200, 1)
+$rifle-green: rgba(67, 83, 63, 1)
+$jet: rgba(49, 50, 55, 1)
+$dark-sienna: rgba(34, 15, 12, 1)
+
+*
+    margin: 0
+    box-sizing: border-box
+
+html
+    position: relative
+    height: 100%
+
+body
+    display: flex
+    font-family: $font-stack
+    min-height: 100vh
+    margin: 0
+    .left
+        background: center / cover no-repeat url("./images/background.jpeg")
+        min-width: 40vw
+        display: flex
+        flex-direction: column
+        align-items: center
+        padding-top: 30vh
+        .logo
+            display: flex
+            justify-content: center
+            align-items: center
+            background-color: rgba($jet, .6)
+            max-height: 15vh
+            width: 100%
+            gap: 5%
+            div
+                font-size: 5em
+                letter-spacing: 1rem
+                margin-top: auto
+                margin-bottom: auto
+                user-select: none
+            img
+                height: 80%
+                margin-top: auto
+                margin-bottom: auto
+        .credit
+            font-size: 0.7em
+            color: white
+            text-align: center
+            margin-top: auto
+            margin-bottom: 5px
+    .right
+        min-width: 60vw
+        height: 100vh
+        display: flex
+        flex-direction: column
+        justify-content: center
+        background-color: $grullo
+        .intro
+            padding: 5%
+            font-weight: bold
+            font-size: 1.2em
+            line-height: 1.5
+        .input-box
+            display: flex
+            flex-direction: column
+            gap: 30px
+            padding: 5%
+            padding-right: 15%
+            background-color: lighten($grullo, 15%)
+            box-shadow: 1px 2px 3px darken($grullo, 15%)
+            h1
+                font-weight: bold
+                font-size: 1.2em
+            .form
+                font-weight: 600
+                letter-spacing: .1rem
+                font-size: 0.7em
+                display: flex
+                gap: 5%
+                flex-wrap: wrap
+                input, label
+                    margin: 7px
+                    display: block
+                input
+                    background-color: lighten($grullo, 10%)
+                    border-radius: 3px
+                    border-width: 1px
+                    border-color: lighten($grullo, 5%)
+                    padding: 2px
+                    &:hover, &:focus
+                        outline: none !important
+                        border-color: darken($grullo, 15%)
+                        box-shadow: 1px 1px 2px darken($grullo, 10%)
+        .foot
+            display: flex
+            flex-direction: column
+            gap: 30px
+            padding: 5%
+            button
+                border: none
+                padding: 10px
+                border-radius: 4px
+                font-weight: bold
+                color: white
+                max-width: 150px
+                background-color: $rifle-green
+                box-shadow: 1px 2px 3px darken($grullo, 15%)
+                &:hover
+                    background-color: lighten($rifle-green, 20%)
+                &:active
+                    background-color: $grullo
+                    color: black
+            a
+                color: lighten($rifle-green, 20%)
+                font-weight: bold
