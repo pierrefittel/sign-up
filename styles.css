@@ -69,7 +69,8 @@ body {
 }
 body .left {
   background: center/cover no-repeat url("./images/background.jpeg");
-  min-width: 40vw;
+  width: 40vw;
+  min-width: 500px;
   display: flex;
   flex-direction: column;
   align-items: center;
